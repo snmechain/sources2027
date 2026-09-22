@@ -30,10 +30,37 @@ L'utilisateur indique au démarrage le nombre d'équipements qu'il souhaite gér
 
 Chaque équipement réseau est défini par la structure `Equipement` suivante :
 
-```c
+```
 typedef struct {
     int id;
     char nom[30];
     char ip[16];
     int est_actif; // 1 = Actif, 0 = Inactif
 } Equipement;
+
+```
+ 
+## 4. Résultats attendus
+--- GESTION DU PARC RESEAU ---
+Combien d'equipements voulez-vous gerer ? 2
+
+--- Saisie de l'equipement 1 ---
+ID : 101
+Nom : Switch-Cisco
+Adresse IP : 192.168.1.1
+Actif (1: Oui, 0: Non) : 1
+
+--- Saisie de l'equipement 2 ---
+ID : 102
+Nom : Routeur-Borne
+Adresse IP : 192.168.1.254
+Actif (1: Oui, 0: Non) : 0
+
+--- LISTE DES EQUIPEMENTS ---
+ID: 101 | Nom: Switch-Cisco  | IP: 192.168.1.1   | Etat: ACTIF
+ID: 102 | Nom: Routeur-Borne | IP: 192.168.1.254 | Etat: INACTIF
+
+Changement d'etat du premier equipement...
+L'equipement 101 est maintenant INACTIF.
+
+Memoire liberee avec succes.
